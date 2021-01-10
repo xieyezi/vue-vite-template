@@ -1,14 +1,11 @@
-// const files = require.context('.', false, /\.ts$/)
-// const modules = {}
+const files = import.meta.glob('./*.ts')
+const modules: any = {}
 
-// files.keys().forEach((key) => {
-// 	if (key === './index.js') return
-// 	modules[key.replace(/(\.\/|\.js)/g, '')] = files(key).default
-// })
-
-// export default modules
-// TODO: 实现类似 webpack require.context 的方法
-
-const modules = {}
+Object.keys(files).forEach((key) => {
+	files[key]().then((moudle) => {
+		modules[key.replace(/(\.\/|\.ts)/g, '')] = moudle.default
+	})
+})
+console.log('modules', modules)
 
 export default modules

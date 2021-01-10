@@ -6,14 +6,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-// @ is an alias to /src
+import { computed, defineComponent } from 'vue'
+import { useStore } from 'vuex'
 import HelloWorld from '../components/HelloWorld.vue'
 
 export default defineComponent({
 	name: 'Home',
 	components: {
 		HelloWorld
+	},
+	setup() {
+		const store = useStore()
+		const homeInfo = computed(() => store.state.home.homeInfo)
+		return {
+			homeInfo
+		}
 	}
 })
 </script>
