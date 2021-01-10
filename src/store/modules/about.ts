@@ -3,7 +3,7 @@ export interface AboutState {
 }
 
 const state: AboutState = {
-	aboutInfo: 'about info'
+	aboutInfo: 'info from about state model'
 }
 const getters = {}
 const mutations = {}

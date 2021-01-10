@@ -6,21 +6,13 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
-import { useStore } from 'vuex'
+import { defineComponent } from 'vue'
 import HelloWorld from '../components/HelloWorld.vue'
 
 export default defineComponent({
 	name: 'Home',
 	components: {
 		HelloWorld
-	},
-	setup() {
-		const store = useStore()
-		const homeInfo = computed(() => store.state.home.homeInfo)
-		return {
-			homeInfo
-		}
 	}
 })
 </script>

@@ -10,5 +10,5 @@ const store = createStore({
 	strict: config.isDev,
 	plugins: config.isDev ? [createLogger()] : []
 })
-// console.log('modules', modules)
+
 export default store

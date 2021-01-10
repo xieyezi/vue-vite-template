@@ -1,11 +1,10 @@
-const files = import.meta.glob('./*.ts')
-const modules: any = {}
+const files = import.meta.globEager('./*.ts')
+
+// eslint-disable-next-line
+const modules: VuexMoudle = {}
 
 Object.keys(files).forEach((key) => {
-	files[key]().then((moudle) => {
-		modules[key.replace(/(\.\/|\.ts)/g, '')] = moudle.default
-	})
+	modules[key.replace(/(\.\/|\.ts)/g, '')] = files[key].default
 })
-console.log('modules', modules)
 
 export default modules

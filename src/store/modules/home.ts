@@ -3,7 +3,7 @@ export interface HomeState {
 }
 
 const state: HomeState = {
-	homeInfo: 'home info'
+	homeInfo: 'info from home state model'
 }
 const getters = {}
 const mutations = {}
