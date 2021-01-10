@@ -4,6 +4,6 @@ declare module '*.vue' {
 	export default component
 }
 
-declare type  VuexMoudle = {
+declare type VuexMoudle = {
 	[k: string]: any
-} 
+}
