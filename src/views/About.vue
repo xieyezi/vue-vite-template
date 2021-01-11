@@ -2,6 +2,7 @@
 	<div class="about">
 		<h1>This is an about page</h1>
 		<p>{{ aboutInfo }}</p>
+		<p>{{ aboutDetail }}</p>
 	</div>
 </template>
 
@@ -14,8 +15,11 @@ export default defineComponent({
 	setup() {
 		const store = useStore()
 		const aboutInfo = computed(() => store.state.about.aboutInfo)
+		const aboutDetail = computed(() => store.state.about.detail.aboutDetail)
+
 		return {
-			aboutInfo
+			aboutInfo,
+			aboutDetail
 		}
 	}
 })

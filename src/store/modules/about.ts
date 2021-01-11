@@ -1,3 +1,5 @@
+import modules from './about'
+
 export interface AboutState {
 	aboutInfo: string
 }
@@ -14,5 +16,6 @@ export default {
 	state,
 	getters,
 	mutations,
-	actions
+	actions,
+	modules
 }
