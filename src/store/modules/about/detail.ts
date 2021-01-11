@@ -1,9 +1,11 @@
 export interface AboutDetailState {
-	aboutDetail: string
+	title: string
+	content: string
 }
 
 const state: AboutDetailState = {
-	aboutDetail: 'detail from about detail state model'
+	title: 'title from about detail state model.',
+	content: 'content from about detail state model.'
 }
 const getters = {}
 const mutations = {}

@@ -2,24 +2,27 @@
 	<div class="about">
 		<h1>This is an about page</h1>
 		<p>{{ aboutInfo }}</p>
-		<p>{{ aboutDetail }}</p>
+		<p>{{ title }}</p>
+		<p>{{ content }}</p>
 	</div>
 </template>
 
 <script lang="ts">
 import { useStore } from 'vuex'
 import { computed, defineComponent } from 'vue'
+import { useVuexValue } from '../hooks'
 
 export default defineComponent({
 	name: 'About',
 	setup() {
 		const store = useStore()
 		const aboutInfo = computed(() => store.state.about.aboutInfo)
-		const aboutDetail = computed(() => store.state.about.detail.aboutDetail)
+		const [title, content] = useVuexValue('about/detail', ['title', 'content'])
 
 		return {
 			aboutInfo,
-			aboutDetail
+			title,
+			content
 		}
 	}
 })

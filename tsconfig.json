@@ -7,6 +7,7 @@
     "jsx": "preserve",
     "skipLibCheck": true,
     "importHelpers": true,
+    "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "lib": ["esnext", "dom"],
