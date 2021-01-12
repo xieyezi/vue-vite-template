@@ -6,17 +6,15 @@ import config from '../config'
 
 export const key: InjectionKey<Store<StateType>> = Symbol()
 
-const store = createStore({
+const store: Store<StateType> = createStore({
 	modules,
-	state: {},
 	mutations: {},
 	actions: {},
 	strict: config.isDev,
 	plugins: config.isDev ? [createLogger()] : []
 })
 
-export const useStore = () => {
+export function useStore() {
 	return baseUseStore(key)
 }
-
 export default store

@@ -16,8 +16,8 @@ const about: Module<AboutStateType, StateType> = {
 	state,
 	getters,
 	mutations,
-	actions,
-	modules
+	actions
+	// modules
 }
 export { AboutStateType, state }
 export default about

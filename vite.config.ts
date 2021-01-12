@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 const config = defineConfig({
+  root:'./',
   alias: [
     {find: '@src', replacement: './src'},
     {find: '@hooks', replacement: './src/hooks'},
