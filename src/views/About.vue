@@ -10,7 +10,7 @@
 <script lang="ts">
 import { useStore } from 'vuex'
 import { computed, defineComponent } from 'vue'
-import { useVuexValue } from '../hooks'
+import { useVuexValue } from '@hooks/index'
 
 export default defineComponent({
 	name: 'About',

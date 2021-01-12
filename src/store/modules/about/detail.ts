@@ -1,9 +1,9 @@
-export interface AboutDetailState {
-	title: string
-	content: string
-}
+import { StateType } from '@typing/index'
+import { Module } from 'vuex'
 
-const state: AboutDetailState = {
+type AboutDetailStateType = typeof state
+
+const state = {
 	title: 'title from about detail state model.',
 	content: 'content from about detail state model.'
 }
@@ -11,10 +11,12 @@ const getters = {}
 const mutations = {}
 const actions = {}
 
-export default {
+const detail: Module<AboutDetailStateType, StateType> = {
 	namespaced: true,
 	state,
 	getters,
 	mutations,
 	actions
 }
+export { AboutDetailStateType, state }
+export default detail

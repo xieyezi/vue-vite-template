@@ -1,18 +1,21 @@
-export interface HomeState {
-	homeInfo: string
-}
+import { StateType } from '@typing/index'
+import { Module } from 'vuex'
 
-const state: HomeState = {
+type HomeStateType = typeof state
+
+const state = {
 	homeInfo: 'info from home state model'
 }
 const getters = {}
 const mutations = {}
 const actions = {}
 
-export default {
+const home: Module<HomeStateType, StateType> = {
 	namespaced: true,
 	state,
 	getters,
 	mutations,
 	actions
 }
+export { HomeStateType, state }
+export default home

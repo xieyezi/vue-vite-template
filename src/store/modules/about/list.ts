@@ -1,18 +1,21 @@
-export interface AboutListState {
-	aboutList: string
-}
+import { StateType } from '@typing/index'
+import { Module } from 'vuex'
 
-const state: AboutListState = {
-	aboutList: 'list from about list state model'
+type AboutListStateType = typeof state
+
+const state = {
+	aboutList: 'info from about list state model.'
 }
 const getters = {}
 const mutations = {}
 const actions = {}
 
-export default {
+const list: Module<AboutListStateType, StateType> = {
 	namespaced: true,
 	state,
 	getters,
 	mutations,
 	actions
 }
+export { AboutListStateType, state }
+export default list

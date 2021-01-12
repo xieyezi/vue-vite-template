@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
+    "baseUrl": "./",
     "strict": true,
     "jsx": "preserve",
     "skipLibCheck": true,
@@ -12,7 +13,13 @@
     "sourceMap": true,
     "lib": ["esnext", "dom"],
     "types": ["vite/client","node"],
-    "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }]
+    "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }],
+    "paths": {
+      "@src/*": ["src/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@typing/*": ["src/types/*"],
+      "@store/*": ["src/store/*"]
+    },
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
