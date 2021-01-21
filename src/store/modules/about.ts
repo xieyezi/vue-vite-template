@@ -1,4 +1,4 @@
-import modules from './about'
+// import modules from './about'
 import { StateType } from '@typing/index'
 import { Module } from 'vuex'
 
